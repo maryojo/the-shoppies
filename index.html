@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shoppies</title>
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4074414092.js" crossorigin="anonymous"></script>
+    
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script> -->
 </head>
 <body>
     <div class="container-fluid app row">
@@ -43,7 +47,10 @@
                                     <p class="" id="year">2002</p>
                                     <p class=""><i class="fas fa-star star-icon"></i><span>   </span><span id="rating"></span>/10 (<span id="noOfVotes"></span>)</p>
                                 </div>
-                                <i class="fas fa-plus-circle col-2 icon add"></i>
+                                <button class="add col-2 icon">
+                                <i class="fas fa-plus-circle ">
+                                </i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -52,9 +59,15 @@
             <div class="side col-md-6 col-sm-12">
                 <div class="notificationbar col-12 row p-3">
                     <div class="col-6"></div>
-                    <i class="far fa-bell col-2 regular-icon" id="notify"></i>
-                    <i class="far fa-save col-2 regular-icon" id="save"></i>
-                    <i class="fas fa-share-alt col-2 regular-icon" id="share"></i>
+                    <a href="" class="col-2">
+                        <i class="fab fab fa-twitter regular-icon"></i>
+                    </a>
+                    <a href="" class="col-2">
+                        <i class="fab fa-instagram regular-icon" id="share"></i>
+                    </a>
+                    <a href="" class="col-2">
+                        <i class="fab fa-facebook regular-icon"></i>
+                    </a>
                 </div>
                 <h5>My Nominations</h5>
                 <hr>
@@ -64,15 +77,15 @@
                     </div>
                     <div class="saved-list col-12" id="saved-list">
                         <!-- <div class="list col-12"> -->
-                            <!-- <div class="row movie-desc">
+                            <!-- <div class="row saved-movie">
                                 <img alt="" class="col-3 movie-image" id="savedMovieImage">
                                 <div class="col-7" id="savedMovie1">
                                     <h6 class="" id="savedMovieTitle1">Sound of Music</h6>
                                     <p class="" id="savedYearOfRelease1">2002</p>
                                 </div>
                                 <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div>
-                            <div class="row movie-desc">
+                            </div> -->
+                            <!-- <div class="row movie-desc">
                                 <div class="col-10 saved-movie" id="savedMovie2">
                                     <h6 class="" id="savedMovieTitle2">Sound of Music</h6>
                                     <p class="" id="savedYearOfRelease2">2002</p>
@@ -106,6 +119,7 @@
             </div>
         <!-- </div> -->
     </div> 
+
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>  
 </body>
