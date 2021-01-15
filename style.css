@@ -1,0 +1,108 @@
+
+
+
+/* .app{
+    padding: 10%;
+} */
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color:cornsilk;
+  }
+
+
+div{
+  padding: 0;
+}
+
+.row{
+  margin: 0;
+}
+
+.row>*{
+    margin:0;
+    padding: 0 !important;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.app {
+    margin: 0px auto;
+    width: 100%;
+    padding: 1.5em;
+    background-color: #17222d;
+    height: 100vh;
+  }
+
+/* .inner-container{
+    background-color: brown;
+    width: 80%;
+    border-radius: 30px;
+} */
+
+.side{
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.input-movie, .btn{
+  border-radius: 50px;
+}
+
+.btn{
+  width: 15%;
+}
+
+i{
+  cursor: pointer;
+}
+
+.icon{
+  color:darkturquoise;
+  text-align: center;
+  font-size: 1.3rem;
+  align-self: center;
+}
+
+.regular-icon{
+  /* color:firebrick; */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.caution-icon{
+  color:firebrick;
+  text-align: center;
+  align-self: center;
+}
+
+.movie-image{
+  padding: 0 4% 0 0 !important;
+}
+
+.searching{
+  display: block;
+}
+
+/* .notificationbar{
+  padding: 0.7rem 0;
+} */
+
+@media(min-width: 320px){
+  .app{
+    /* padding-top: 40% !important; */
+    /* padding-bottom: 300px !important; */
+  }
+}
+
