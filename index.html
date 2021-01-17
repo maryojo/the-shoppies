@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shoppies</title>
-    
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <script src="https://kit.fontawesome.com/4074414092.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4074414092.js" crossorigin="anonymous"></script>
     
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script> -->
 </head>
 <body>
+    <img src="images/design.png" class="design">
     <div class="container-fluid app row">
-        <!-- <div class="inner-container row"> -->
+        <div class="row col-12">
+            <img src="images/logo.png" alt=" " class="logo col-12 mt-5 mb-4">
+            <!-- <div class="notificationbar col-6 row p-3">
+                <div class="col-6"></div>
+                <a href="" class="col-2">
+                    <i class="fab fab fa-twitter regular-icon"></i>
+                </a>
+                <a href="" class="col-2">
+                    <i class="fab fa-instagram regular-icon" id="share"></i>
+                </a>
+                <a href="" class="col-2">
+                    <i class="fab fa-facebook regular-icon"></i>
+                </a>
+            </div> -->
+        </div>
             <div class="side col-md-6 col-sm-12">
-                <img src="logo.png" alt=" " class="logo col-12">
+                
                 <div class="searchbar col-12">
                     <form>
                         <div class="input-group mb-3">
+                            <!-- <label for="inputMovie"></label> -->
                             <input type="text" class="form-control input-movie" id="inputMovie" placeholder="Search for a movie" aria-label="Search movies" aria-describedby="searchButton">
-                            <button class="btn btn-outline-secondary search-button" type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                            <button class="btn btn-outline-secondary search-button" type="button" id="searchButton"><i class="fas fa-search" onfocusout="hideSearching()"></i></button>
                           </div>
                     </form>
                 </div>
@@ -36,88 +49,29 @@
                 <div class="results col-12">
                     <div class="result-list" id="result-list">
                         <div class="no-result" id="no-result">
-                            <img src="" alt="" class="no-result-image img-fluid" id="noResultImage">
+                            <img src="images/search.png" alt="" class="no-result-image img-fluid" id="noResultImage">
                         </div>
-                        <div class="list col-12" id="searchResult" style="display: none;">
-                            <div class="row movie-desc">
-                                <img alt="" class="col-3 movie-image" id="movieImg">
-                                <div class="col-7" id="movie1">
-                                    <h6 class="" id="movieTitle">Sound of Music</h6>
-                                    <p class="" id="genre">Genre</p>
-                                    <p class="" id="year">2002</p>
-                                    <p class=""><i class="fas fa-star star-icon"></i><span>   </span><span id="rating"></span>/10 (<span id="noOfVotes"></span>)</p>
-                                </div>
-                                <button class="add col-2 icon">
-                                <i class="fas fa-plus-circle ">
-                                </i>
-                                </button>
-                            </div>
+                        <div class="list col-12" id="searchResult">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="side col-md-6 col-sm-12">
-                <div class="notificationbar col-12 row p-3">
-                    <div class="col-6"></div>
-                    <a href="" class="col-2">
-                        <i class="fab fab fa-twitter regular-icon"></i>
-                    </a>
-                    <a href="" class="col-2">
-                        <i class="fab fa-instagram regular-icon" id="share"></i>
-                    </a>
-                    <a href="" class="col-2">
-                        <i class="fab fa-facebook regular-icon"></i>
-                    </a>
-                </div>
+                
+                
                 <h5>My Nominations</h5>
                 <hr>
                 <div class="saved col-12">
                     <div class="no-saved">
-                        <img src="" alt="" class="no-saved-image img-fluid" id="noSavedImage" style="display: none;">
+                        <img src="images/rating.png" alt="" class="no-saved-image img-fluid" id="noSavedImage" style="display: none;">
                     </div>
                     <div class="saved-list col-12" id="saved-list">
-                        <!-- <div class="list col-12"> -->
-                            <!-- <div class="row saved-movie">
-                                <img alt="" class="col-3 movie-image" id="savedMovieImage">
-                                <div class="col-7" id="savedMovie1">
-                                    <h6 class="" id="savedMovieTitle1">Sound of Music</h6>
-                                    <p class="" id="savedYearOfRelease1">2002</p>
-                                </div>
-                                <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div> -->
-                            <!-- <div class="row movie-desc">
-                                <div class="col-10 saved-movie" id="savedMovie2">
-                                    <h6 class="" id="savedMovieTitle2">Sound of Music</h6>
-                                    <p class="" id="savedYearOfRelease2">2002</p>
-                                </div>
-                                <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div>
-                            <div class="row movie-desc">
-                                <div class="col-10" id="savedMovie3">
-                                    <h6 class="" id="savedMovieTitle3">Sound of Music</h6>
-                                    <p class="" id="savedYearOfRelease3">2002</p>
-                                </div>
-                                <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div>
-                            <div class="row movie-desc">
-                                <div class="col-10" id="savedMovie4">
-                                    <h6 class="" id="savedMovieTitle4">Sound of Music</h6>
-                                    <p class="" id="savedYearOfRelease4">2002</p>
-                                </div>
-                                <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div>
-                            <div class="row movie-desc">
-                                <div class="col-10" id="savedMovie5">
-                                    <h6 class="" id="savedMovieTitle5">Sound of Music</h6>
-                                    <p class="" id="savedYearOfRelease5">2002</p>
-                                </div>
-                                <i class="fas fa-trash col-2 caution-icon delete"></i>
-                            </div> -->
-                        </div>
-                    <!-- </div> -->
+                    </div>
                 </div>
+                <div class="">
+                    <img src="images/design.png" class="d-md-none design2">
+                    </div>
             </div>
-        <!-- </div> -->
     </div> 
 
   <script src="script.js"></script>

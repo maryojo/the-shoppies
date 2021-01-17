@@ -17,6 +17,8 @@
     margin: 0;
     color:cornsilk;
     background-color: #17222d;
+    position: relative;
+    height: 100vh;
   }
 
 
@@ -38,15 +40,33 @@ div{
 }
 
 .app {
-    margin: 0px auto;
+    margin: -70px;
     width: 100%;
     padding: 1.5em;
     background-color: #17222d;
   }
+.logo{
+  width: 200px;
+  padding-left: 1.5rem !important;
+}
 
 .side{
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+  height: 90vh !important;
+}
+
+.design{
+  position: absolute;
+  bottom: 5%;
+  left:5%;
+  width: 17em;
+  /* right:auto; */
+}
+
+.input-movie{
+  border-bottom-left-radius: 50px !important;
+  border-top-left-radius: 50px !important;
 }
 
 .input-movie, .btn{
@@ -55,11 +75,16 @@ div{
 
 .btn{
   width: 15%;
+  background-color: #D67086;
 }
 
 .add{
   border-radius: 20%;
   width: 2.5rem;
+}
+
+.add::hover{
+  color:#17222d;
 }
 
 i{
@@ -103,14 +128,45 @@ i{
   display: block;
 }
 
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
 /* .notificationbar{
   padding: 0.7rem 0;
 } */
 
-@media(min-width: 320px){
-  .app{
-    /* padding-top: 40% !important; */
-    /* padding-bottom: 300px !important; */
+@media(max-width: 768px){
+  .side{
+    height: 100% !important;
+  }
+
+  .design{
+    display: none;
+  }
+
+  .design2{
+    position: absolute;
+    bottom: -120%;
+    left:25%;
+    right:25%;
+    width: 17rem;
+    /* display:block; */
+  }
+}
+
+@media(max-width: 400px){
+  .side{
+    height: 70% !important;
+  }
+
+  .design2{
+    width: 60%;
+    bottom: -80%;
+    /* display:block; */
   }
 }
 

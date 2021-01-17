@@ -1,21 +1,30 @@
-$(function(){
-    $("#q").focus(); //Focus on search field
-    $("#q").autocomplete({
-        minLength: 0,
-        delay:5,
-        source: "suggest.php",
-        focus: function( event, ui ) {
-            $(this).val( ui.item.value );
-            return false;
-        },
-        select: function( event, ui ) {
-            $(this).val( ui.item.value );
-            return false;
-        }
-    }).data("uiAutocomplete")._renderItem = function( ul, item ) {
-        return $("<li></li>")
-            .data( "item.autocomplete", item )
-            .append( "<a>" + (item.img?"<img class='imdbImage' src='imdbImage.php?url=" + item.img + "' />":"") + "<span class='imdbTitle'>" + item.label + "</span>" + (item.cast?"<br /><span class='imdbCast'>" + item.cast + "</span>":"") + "<div class='clear'></div></a>" )
-            .appendTo( ul );
-    };
-});
+// // $( "#inputMovie" ).autocomplete({
+// //     source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+// //   });
+// // let inputMovie = document.getElementById('inputMovie');
+// // let nameMovie = inputMovie.innerHTML;
+// // let searchResult = document.getElementById('searchResult');
+
+// $(function () {
+//     var getData = function (request, response) {
+//         $.getJSON(
+//             "https://www.omdbapi.com/?t="+request.term+"&apikey=5dbf8aee",
+//             function (data) {
+//                 response(data);
+//             });
+//     };
+ 
+//     var selectItem = function (event, ui) {
+//         $(searchResult).val(ui.item.value);
+//         return false;
+//     }
+ 
+//     $(searchResult).autocomplete({
+//         source: getData,
+//         select: selectItem,
+//         minLength: 2,
+//         change: function() {
+//             $(searchResult).val("").css("display", 2);
+//         }
+//     });
+// });
