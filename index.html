@@ -33,7 +33,6 @@
                 <div class="searchbar col-12">
                     <form>
                         <div class="input-group mb-3">
-                            <!-- <label for="inputMovie"></label> -->
                             <input type="text" class="form-control input-movie" id="inputMovie" placeholder="Search for a movie" aria-label="Search movies" aria-describedby="searchButton">
                             <button class="btn btn-outline-secondary search-button" type="button" id="searchButton"><i class="fas fa-search" onfocusout="hideSearching()"></i></button>
                           </div>
@@ -49,7 +48,9 @@
                 <div class="results col-12">
                     <div class="result-list" id="result-list">
                         <div class="no-result" id="no-result">
-                            <img src="images/search.png" alt="" class="no-result-image img-fluid" id="noResultImage">
+                            <!-- <img src="images/search.png" alt="" class="no-result-image img-fluid" id="noResultImage"> -->
+                            No movies here!
+
                         </div>
                         <div class="list col-12" id="searchResult">
                         </div>
@@ -62,15 +63,16 @@
                 <h5>My Nominations</h5>
                 <hr>
                 <div class="saved col-12">
-                    <div class="no-saved">
-                        <img src="images/rating.png" alt="" class="no-saved-image img-fluid" id="noSavedImage" style="display: none;">
+                    <div class="no-saved" id="no-saved">
+                        <!-- <img src="images/rating.png" alt="" class="no-saved-image img-fluid" id="noSavedImage" style="display: none;"> -->
+                        No nominations yet!
                     </div>
                     <div class="saved-list col-12" id="saved-list">
                     </div>
                 </div>
                 <div class="">
                     <img src="images/design.png" class="d-md-none design2">
-                    </div>
+                </div>
             </div>
     </div> 
 

@@ -13,8 +13,10 @@ let savedMovieTitle = document.getElementsByClassName('saved-movie-title');
 
 const searching = document.getElementById('searching');
 const noResultDisplay = document.getElementById('no-result');
+const noSaved = document.getElementById('no-saved');
 const resultList = document.getElementById('result-list');
 const savedList = document.getElementById('saved-list');
+
 
 let movieTit;
 let movieImg;
@@ -44,7 +46,7 @@ const searchFilms = async searchText =>{
     }
 
     if(movies['Poster'] === undefined){
-        alert('Wrong movie');
+        return console.log('undefined');
     }
 
     // input values into html
@@ -54,6 +56,7 @@ const searchFilms = async searchText =>{
 
     //hide searching animation
     searching.style.display= "none";
+    noResultDisplay.style.display="none";
 
     //show the output
     outputHtml(movies);
@@ -63,10 +66,19 @@ const searchFilms = async searchText =>{
 }
 )}
 
+const outputUndefined = () =>{
+    const html = `
+    <div class="row movie-desc hide">
+    <img src="images/rating.png" alt="" class="col-12>
+    </div>
+    `;
+
+    searchResultDisplay.innerHTML = html;
+}
+
 //Show results in display
 const outputHtml = data => {
         if(inputMovie.value.length !== 0){
-
             const html = 
             `<div class="row movie-desc">
                 <img src="${data['Poster']}" alt="" class="col-3 movie-image" id="movieImg">
@@ -98,7 +110,6 @@ const checkMovie = () =>{
 
         // check if list is full
             if(savedMovie.length < 5){
-                console.log('1');
                 addtoNomination();
             } else {
                 alert('Sorry, you have made 5 nominations already.');
@@ -108,6 +119,8 @@ const checkMovie = () =>{
 
     //add checked movie to nomination list
     const addtoNomination = () =>{
+        noSaved.style.display="none";
+
         let div1 = document.createElement('div');
         savedList.appendChild(div1);
         div1.classList.add('row', 'saved-movie');
@@ -153,6 +166,8 @@ const checkMovie = () =>{
 
 
 }
+
+
 
 
 //Event listeners
