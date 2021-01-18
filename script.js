@@ -62,7 +62,8 @@ const searchFilms = async searchText =>{
     outputHtml(movies);
 })
 .catch(() =>{
-   
+    searching.style.display = "none";
+   alert('Check your internet connection and reload the page');
 }
 )}
 
